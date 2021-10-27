@@ -9,6 +9,18 @@ erase.addEventListener("click", () => {
     eraseColor();
 }); 
 
+const color = document.querySelector('#color');
+color.addEventListener(('click'), () => {
+    makeMagic();
+});
+
+const psycho = document.querySelector('#psycho');
+psycho.addEventListener(('click'), () => {
+    makePsycho();
+});
+
+
+
 function makeGrid(n) {
     // n = prompt("hoeveel op hoeveel?");
     for (i = 0; i < n; i++) {
@@ -25,13 +37,29 @@ function makeGrid(n) {
     }
 }
 
-
 function makeMagic() {
     const divs = document.querySelectorAll('.grid');
 
     divs.forEach((div) => {
         div.addEventListener("mouseenter", () => {
             div.style.backgroundColor = "pink";
+        });
+    });
+}
+
+
+function makePsycho() {
+    const divs = document.querySelectorAll('.grid');
+
+
+
+    divs.forEach((div) => {
+        div.addEventListener("mouseenter", () => {
+            let r = Math.floor(Math.random() * 255);
+            let g = Math.floor(Math.random() * 255);
+            let b = Math.floor(Math.random() * 255);
+            let col = "rgb(" + r + "," + g + "," + b + ")";
+            div.style.backgroundColor = col;
         });
     });
 }

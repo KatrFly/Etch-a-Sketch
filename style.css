@@ -1,0 +1,34 @@
+div {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    
+}
+
+.rows {
+    display: flex;
+    flex-direction: row;
+}
+
+.container {
+    width: 480px;
+    height: 480px;
+    display: flex;
+}
+
+.grid {
+    margin: 2px;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    background-color: pink;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    font-size: 25px;
+}

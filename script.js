@@ -51,8 +51,6 @@ function makeMagic() {
 function makePsycho() {
     const divs = document.querySelectorAll('.grid');
 
-
-
     divs.forEach((div) => {
         div.addEventListener("mouseenter", () => {
             let r = Math.floor(Math.random() * 255);
@@ -64,12 +62,13 @@ function makePsycho() {
     });
 }
 
-
-
 const reset = document.querySelector('#reset');
 reset.addEventListener("click", () => {
-    makeGrid(n);
-    makeMagic();
+  const divs = document.querySelectorAll('.grid');
+
+  divs.forEach((div) => {
+    div.style.backgroundColor = "white";
+  })
 })
 
 
